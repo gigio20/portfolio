@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kio — Gianfranco Bisio</title>
+<meta name="description" content="Caso: Kio, una red social de artículos editoriales. Ocho épicas de producto, tres roles y un design system propio sincronizado a código.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="wrap site-header">
+  <a class="site-header__name" href="../index.html">Gianfranco Bisio</a>
+  <nav>
+    <ul class="site-nav">
+      <li><a href="../index.html">Casos</a></li>
+      <li><a href="../sobre-mi.html">Sobre mí</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="mailto:gianfbisio@gmail.com">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr class="rule">
+
+<main>
+
+  <!-- Encabezado del caso -->
+  <section class="wrap wrap--text case-hero">
+    <p class="label case-hero__kicker">Caso 01 — Producto</p>
+    <h1 class="case-hero__title">Kio: una red social donde el contenido vive en artículos</h1>
+    <p class="lead case-hero__lead">Ocho épicas, tres roles y un design system propio — de la conceptualización al handoff con ingeniería.</p>
+  </section>
+
+  <!-- Ficha técnica -->
+  <section class="wrap">
+    <dl class="specs">
+      <div class="specs__item"><dt class="label">Rol</dt><dd>Product Designer &amp; Founder — arquitectura conceptual, flujos, design system, handoff</dd></div>
+      <div class="specs__item"><dt class="label">Equipo</dt><dd>Equipo de ingeniería + diseño, trabajo directo con los devs</dd></div>
+      <div class="specs__item"><dt class="label">Alcance</dt><dd>8 épicas: acceso, onboarding, maker, lector, home, perfil, búsqueda, fundaciones</dd></div>
+      <div class="specs__item"><dt class="label">Periodo</dt><dd>2025 — hoy · en desarrollo activo, landing en producción</dd></div>
+    </dl>
+  </section>
+
+  <!-- Cuerpo -->
+  <article class="wrap wrap--text prose">
+
+    <h2>Contexto</h2>
+
+    <p>Es notable —para mí y para cualquiera que mire— el daño que nos está haciendo el scroll infinito. A nosotros, a nuestros hijos, a la sociedad. El contenido cada vez más superficial, y el tiempo que se va sin que nadie pueda decir en qué se fue.</p>
+
+    <p>Pero no creo que la salida sea abandonar las redes y aislarnos del mundo. Estar conectados no es el problema.</p>
+
+    <blockquote>El problema es la forma en que estamos conectando. Vivimos sobre sistemas diseñados alrededor de la adicción.</blockquote>
+
+    <p>Ahí está la diferencia que Kio quiere plantar.</p>
+
+    <h2>El problema</h2>
+
+    <p>Kio no quiere que entres a scrollear seis horas sin sentido. Quiere que entres a informarte o a entretenerte, que encuentres algo que te interese rápido, leas algo que te guste, y te vayas con información nueva. <strong>De lo intangible a lo fáctico.</strong></p>
+
+    <p>Eso implica dos apuestas. La primera: volver a las palabras y al texto antes que al video — que parece haberse convertido en el único formato donde la información puede vivir. La segunda: darle a quien escribe las herramientas para expresarse, tanto literaria como gráficamente.</p>
+
+    <p>Por eso en Kio los artículos son libres de temática <strong>y de diseño</strong>. Esa libertad es exactamente lo que vuelve difícil el problema de la card.</p>
+
+    <h2>Mi rol</h2>
+
+    <p>Esta idea tiene más de diez años dando vueltas en mi cabeza. Taringa fue mi mayor inspiración: la primera versión era construir un lugar para leer y escribir cosas casuales, invocando la sensación de leer una revista. Una lectura casual, pero interesante.</p>
+
+    <p>Con los años vi cómo la idea dejaba de ser una linda idea y empezaba a responder a casi una necesidad social, en un momento de parón tecnológico. Ahí dejó de ser un sueño y nos pusimos manos a la obra.</p>
+
+    <p>Me encargué del diseño al 100%. El recorrido fue largo: desde una carpeta con hojas oficio y pantallas dibujadas con regla, a pantallas en Canva, a los primeros mockups sin ninguna estructura en Figma, a construir el design system entero —pantallas responsive, flujos, happy y unhappy paths, anotaciones y animaciones para los desarrolladores— y a trabajar codo a codo con el equipo de programación para pulir cada detalle.</p>
+
+    <h2>Ocho épicas, tres roles</h2>
+
+    <p>Kio se diseñó como un producto de tres roles —quien escribe, quien lee, quien entra sin registrarse— sobre ocho épicas: acceso, onboarding, maker, lector, home, perfil, búsqueda y las fundaciones técnicas. Cada una con sus flujos, sus caminos felices y sus caminos rotos.</p>
+
+    <figure>
+      <div class="carousel">
+        <div>
+          <img class="piece__img" src="../assets/img/kio/home.webp" alt="Home de Kio: carrusel vertical de tapas, una por pantalla, con las categorías arriba" width="412" height="917" loading="lazy">
+          <p class="piece__cap">Home — una tapa por vez, sin grilla que invite a saltar</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/maker-contenido.webp" alt="Editor de artículos: bloques de distinto ancho con título, párrafo, cita e imagen" width="412" height="917" loading="lazy">
+          <p class="piece__cap">Maker — el editor por bloques, con el texto en primer plano</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/buscador.webp" alt="Pantalla de búsqueda con búsquedas recientes y resultados" width="412" height="896" loading="lazy">
+          <p class="piece__cap">Búsqueda — recientes y resultados</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/perfil-propio.webp" alt="Perfil del autor: su revista, con sus artículos publicados y suscriptores" width="412" height="917" loading="lazy">
+          <p class="piece__cap">Perfil — la revista de cada autor</p>
+        </div>
+      </div>
+      <figcaption>Cuatro de las ocho épicas. El feed es un carrusel de a una tapa —no una grilla que invite a saltar— y el editor pone el texto por delante de todo lo demás.</figcaption>
+    </figure>
+
+    <figure class="figure--phone">
+      <img class="piece__img" src="../assets/img/kio/lector.webp" alt="Artículo completo en el lector: encabezado, cuerpo con imagen, cita destacada y bloque de cierre" width="412" height="2027" loading="lazy">
+      <figcaption>El lector completo: encabezado, cuerpo con imágenes, cita destacada y bloque de cierre. La interfaz desaparece detrás del texto — que era el punto.</figcaption>
+    </figure>
+
+    <h2>La decisión central: cómo se ve un artículo en el feed</h2>
+
+    <p>Kio tiene una tensión en el centro, y aparece entera en la card.</p>
+
+    <p>El escritor tiene que sentirse él mismo: si la plataforma le impone un estilo, publica peor o directamente no publica. El lector, en cambio, necesita reconocer un objeto que entienda y pueda digerir — tiene que haber una marca conceptual de la plataforma. Las dos cosas se pelean. Cuanto más carácter tiene la card, menos lugar le queda al autor; cuanto más libre es el autor, menos se parece una card a la otra y más se rompe el feed.</p>
+
+    <p>La regla que salió de ahí: <strong>homogeneidad en el continente, heterogeneidad en el contenido.</strong> Todo lo que es estructura —dónde va la información, qué se garantiza, cómo se comporta la grilla— es de la plataforma y no se negocia. Todo lo que es expresión —la portada, el tono, el arte— es del autor y no se toca.</p>
+
+    <p>Con esa regla, la exploración dejó de ser una búsqueda estética y se volvió un test. Cada variante intervenía el trabajo del autor en distinto grado.</p>
+
+    <!-- Exploración A–H -->
+    <figure>
+      <div class="carousel">
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-b-marco.webp" alt="Variante B: la portada enmarcada como obra, con margen blanco alrededor" width="412" height="660" loading="lazy">
+          <p class="piece__cap"><strong>B · Marco</strong> — el arte enmarcado, editorial</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-c-split.webp" alt="Variante C: portada arriba y bloque sólido de marca abajo con el título" width="412" height="660" loading="lazy">
+          <p class="piece__cap"><strong>C · Split</strong> — panel sólido de marca</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-d-scrim.webp" alt="Variante D: portada a sangre con velo oscuro para garantizar contraste" width="412" height="660" loading="lazy">
+          <p class="piece__cap"><strong>D · Scrim</strong> — full-bleed con scrim garantizado</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-e-ficha.webp" alt="Variante E: ficha editorial donde el titular manda sobre la imagen" width="412" height="700" loading="lazy">
+          <p class="piece__cap"><strong>E · Ficha</strong> — el titular manda</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-f-brutal.webp" alt="Variante F: brutalist editorial, con tipografía grande y reglas duras" width="412" height="700" loading="lazy">
+          <p class="piece__cap"><strong>F · Brutal</strong> — brutalist editorial</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/card-g-frosted.webp" alt="Variante G: portada a sangre con cápsula de vidrio translúcido" width="412" height="660" loading="lazy">
+          <p class="piece__cap"><strong>G · Frosted</strong> — vidrio sobre la tapa</p>
+        </div>
+      </div>
+      <figcaption>Las seis variantes descartadas. <strong>B</strong> le pone un marco. <strong>C</strong> le deja la mitad de la card a la marca. <strong>D</strong> le pasa un velo encima. <strong>E</strong> la convierte en ilustración de un titular. <strong>F</strong> le impone una personalidad fuerte. <strong>G</strong> se acerca más que ninguna, pero el vidrio todavía era un gesto de la plataforma sobre la imagen. Ninguna era fea: todas le sacaban algo al autor para dárselo a la plataforma.</figcaption>
+    </figure>
+
+    <figure class="resolved">
+      <img class="piece__img" src="../assets/img/kio/card-h-hibrido.webp" alt="Variante H, la elegida: tapa a sangre completa con cápsula de vidrio, kicker de categoría y metadata garantizada" width="412" height="680" loading="lazy">
+      <figcaption><strong>H · Híbrido</strong> — la portada va a sangre, intacta: sin marco, sin velo, sin marca encima. El autor manda en el 100% del arte. Y sobre ella flota una cápsula que hace una sola cosa: sostener información. Título, categoría, autor, tiempo de lectura y valoración. Es el <em>piso de metadata garantizado</em> — incluso si la portada no dice nada, el lector siempre entiende qué está mirando.</figcaption>
+    </figure>
+
+    <h3>El costo de esta decisión</h3>
+    <p>Si la plataforma no impone estilo, la calidad del feed depende de las portadas de los autores: una portada mala da una card mala, y no hay diseño de plataforma que la salve. Lo único que se puede garantizar es que <em>se entienda</em>. Es un riesgo asumido a cambio de que nadie sienta que su trabajo vive dentro del estilo de otro.</p>
+
+    <h2>Los estados: donde la marca habla por sí sola</h2>
+
+    <p>Para mí los estados son el único lugar donde la marca habla por sí sola.</p>
+
+    <p>Pensalo así: en un modo de uso normal, Kio refleja lo que el lector o el escritor buscan. Es una carcasa. Es en los estados —vacíos, de error, pantallas inesperadas— donde Kio tiene la oportunidad de ser sí misma: de no mostrar a otro, sino de mostrarse a sí misma.</p>
+
+    <p>Por eso importan tanto. Si un producto, sin nada que mostrar, sigue mostrando carácter, ahí es donde nace una marca con identidad. El happy path lo diseña cualquiera; los estados son la firma.</p>
+
+    <figure>
+      <div class="pieces">
+        <div>
+          <img class="piece__img" src="../assets/img/kio/estado-lista-espera.webp" alt="Estado de lista de espera: ilustración de un sillón con el texto «Ups! llegaste antes de tiempo»" width="412" height="917" loading="lazy">
+          <p class="piece__cap">Lista de espera — «Ups! llegaste antes de tiempo»</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/estado-error.webp" alt="Estado de error 404: ilustración de un ovni con el texto «¿Habrán sido los aliens?»" width="412" height="917" loading="lazy">
+          <p class="piece__cap">Error — «¿Habrán sido los aliens?»</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/estado-sin-resultados.webp" alt="Estado de búsqueda sin resultados: «Parece que no hay nada… por ahora» con la invitación a escribir sobre el tema" width="412" height="896" loading="lazy">
+          <p class="piece__cap">Búsqueda vacía — «Parece que no hay nada… por ahora»</p>
+        </div>
+        <div>
+          <img class="piece__img" src="../assets/img/kio/comentarios-vacio.webp" alt="Estado de comentarios vacíos: «Demasiada paz por acá» con la invitación a ser el primero" width="538" height="1077" loading="lazy">
+          <p class="piece__cap">Sin comentarios — «Demasiada paz por acá»</p>
+        </div>
+      </div>
+      <figcaption>Cuatro estados donde no hay nada que mostrar, y sin embargo el producto se muestra a sí mismo. El copy es propio, y no es decoración: es la voz de la marca haciendo su único trabajo posible.</figcaption>
+    </figure>
+
+    <h2>El design system</h2>
+
+    <p>El sistema se construyó en Figma, se pasó a código, y hoy vive empaquetado en un pipeline en Azure DevOps que vamos actualizando a medida que el producto crece. <strong>Más de 100 componentes — 250 si se cuentan las variantes</strong> —, tokens semánticos, tema claro y oscuro, y la librería publicada como fuente de verdad para diseño e ingeniería.</p>
+
+    <p>Vive como sección de este caso y no como un caso aparte, por una razón simple: un design system no es un logro en sí mismo. Es lo que un producto necesita cuando crece. Contarlo separado sería mostrar el andamio y no el edificio.</p>
+
+    <h2>Decisiones de alcance</h2>
+
+    <p>El MVP 1 recortó muchísimo. Somos un equipo chico, joven, y la mitad no tenía experiencia previa: saber recortar, y entender qué secciones importantes no eran el core, fue uno de los procesos más difíciles del proyecto.</p>
+
+    <p>Secciones enteras —Biblioteca, Explorar— que en mi cabeza siempre fueron centrales chocaron con una maraña de base de datos, gestión de acceso de usuarios y guardado del artículo en JSON que reclamaban prioridad. Lo que parecía accesorio resultó ser la fundación, y lo que parecía el corazón tuvo que esperar.</p>
+
+    <h2>Qué aprendí</h2>
+
+    <p>Aprendí que a veces lo importante no es el core, y que el core suele vivir en lo que no te das ni cuenta de que está ahí. Es casi invisible.</p>
+
+    <p>Y aprendí algo más grande, que me cambió la forma de diseñar: <strong>un espacio digital tiene la misma capacidad de influencia que un espacio físico.</strong> Es como entrar a una casa y sentir que algo no cierra, o entrar a un colegio y sentir que el lugar tiene vida. Los espacios digitales también cargan una energía, una dinámica.</p>
+
+    <p>Por eso lo clave es entender <em>qué dinámica querés expresar</em>. Si diseñás únicamente con fines estéticos, vas a transmitir únicamente energía estética — y para una marca, eso no es un objetivo.</p>
+
+    <blockquote>Saber qué querés transmitir importa más que saber cómo querés que se vea.</blockquote>
+
+    <p>Y una última, más terrenal: todo es mucho más complicado de cerca que de lejos. Si te alejás, todo se ve liso. Cuando estás ahí, en el canvas de Figma peleándote con una variable o con los registros DNS, todo se ve bastante más arrugado y empinado. Triste, pero real.</p>
+
+  </article>
+
+  <!-- Navegación entre casos -->
+  <nav class="wrap case-nav">
+    <a href="../index.html">← Todos los casos</a>
+    <a href="boty.html">Siguiente: sistema de agentes →</a>
+  </nav>
+
+</main>
+
+<footer class="wrap site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="label">Contacto</p>
+      <p style="margin-top:.5rem"><a href="mailto:gianfbisio@gmail.com">gianfbisio@gmail.com</a></p>
+    </div>
+    <nav>
+      <a href="https://www.linkedin.com/in/gianfranco-bisio-b39810205/">LinkedIn</a>
+      <a href="../sobre-mi.html">Sobre mí</a>
+      <a href="../cv.html">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

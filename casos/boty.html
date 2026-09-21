@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boty — Gianfranco Bisio</title>
+<meta name="description" content="Caso: diseño de un sistema de agentes con identidad estable sobre un sustrato que cambia cada seis meses. Autonomía, permisos, revisión humana y modos de falla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="wrap site-header">
+  <a class="site-header__name" href="../index.html">Gianfranco Bisio</a>
+  <nav>
+    <ul class="site-nav">
+      <li><a href="../index.html">Casos</a></li>
+      <li><a href="../sobre-mi.html">Sobre mí</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="mailto:gianfbisio@gmail.com">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr class="rule">
+
+<main>
+
+  <section class="wrap wrap--text case-hero">
+    <p class="label case-hero__kicker">Caso 02 — Diseño de sistema · IA</p>
+    <h1 class="case-hero__title">Boty: estabilidad sobre un oleaje bestial</h1>
+    <p class="lead case-hero__lead">Diseñar un sistema de agentes que sobrevive al sustrato: identidad invariable, modelo intercambiable, y humanos donde de verdad hacen falta.</p>
+  </section>
+
+  <section class="wrap">
+    <dl class="specs">
+      <div class="specs__item"><dt class="label">Rol</dt><dd>Diseño del sistema, de sus permisos y de sus interfaces</dd></div>
+      <div class="specs__item"><dt class="label">Alcance</dt><dd>Autonomía, permisos por herramienta, revisión humana, memoria, superficies, infraestructura</dd></div>
+      <div class="specs__item"><dt class="label">Infraestructura</dt><dd>Servidor propio, servidor como código, identidad agnóstica del modelo</dd></div>
+      <div class="specs__item"><dt class="label">Estado</dt><dd>En operación — uso propio diario</dd></div>
+    </dl>
+  </section>
+
+  <article class="wrap wrap--text prose">
+
+    <h2>El porqué</h2>
+
+    <p>Quería meterme en el mundo de la IA y sentía que nada de lo que hiciera importaba. Siempre venía una ola nueva que me tapaba. Probaba ChatGPT 4.5 y a los pocos días Anthropic y Moonshot ya tenían tres modelos nuevos que eran mejores. Quería probar el nuevo Claude Code y a las dos semanas había que aprender <em>harness engineering</em>, <em>loop engineering</em> y <em>prompt engineering</em>.</p>
+
+    <p>Me quería subir a la ola de la IA y la ola me volteaba siempre.</p>
+
+    <p>Así que Boty terminó siendo <strong>mi bote</strong>: lo que me permite mantenerme en la superficie. Un sistema estable, mío, que no depende de lo que se le ocurra al CEO de una empresa mañana.</p>
+
+    <blockquote>Es lograr estabilidad sobre un oleaje bestial.</blockquote>
+
+    <h2>El principio: el modelo es un cable</h2>
+
+    <p>El sistema está pensado para que cada modelo sea como un cable. Le cambiás el cable y el aparato es el mismo. Todo lo que construyo encima lo conservo: el sistema de memoria que voy probando y mejorando; si veo un repo interesante, lo acoplo; si otro proyecto saca una función increíble, la adquiero; si la semana que viene se descubre una forma nueva de orquestación agéntica, la replico.</p>
+
+    <p>Y no empezando de cero: <strong>acumulativo</strong>. Siempre el mismo sistema, corra el modelo que corra, lo use de la forma que lo use, esté donde esté.</p>
+
+    <p>Para eso hizo falta el <em>harness</em> más minimalista posible — una capa de identidad invariable que se mantiene, y capas de roles por encima que varían. Todo lo demás es extensión: un plugin, una skill, un sombrero.</p>
+
+    <figure class="figure--narrow">
+      <img class="piece__img" src="../assets/img/boty/modelo.webp" alt="Panel de la consola para cambiar de modelo: proveedor, modelo, nivel de razonamiento y consumo de tokens" width="276" height="367" loading="lazy">
+      <figcaption>El cambio de modelo, en la consola. Proveedor, modelo y nivel de razonamiento son tres campos — no una migración.</figcaption>
+    </figure>
+
+    <figure>
+      <svg viewBox="0 0 900 504" width="100%" role="img" aria-labelledby="dgm-boty-title">
+        <title id="dgm-boty-title">Arquitectura del sistema: el modelo es intercambiable, la capa de identidad y memoria no cambia, y los roles y las superficies se suman por encima.</title>
+
+        <!-- Superficies -->
+        <rect x="0.5" y="0.5" width="899" height="87" fill="#FAF8F5" stroke="#E2DCD3"/>
+        <text x="28" y="36" font-family="Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.7" fill="#857C71">SUPERFICIES</text>
+        <text x="28" y="61" font-family="Inter, sans-serif" font-size="15" fill="#16130F">Consola · Captura en papel electrónico · Servidor propio</text>
+        <text x="872" y="50" text-anchor="end" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1.4" fill="#857C71">SE SUMAN</text>
+
+        <!-- Roles -->
+        <rect x="0.5" y="104.5" width="899" height="87" fill="#FAF8F5" stroke="#E2DCD3"/>
+        <text x="28" y="140" font-family="Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.7" fill="#857C71">ROLES</text>
+        <text x="28" y="165" font-family="Inter, sans-serif" font-size="15" fill="#16130F">Editor · Supervisor · Reciclador · Consejero — cada uno con permisos acotados</text>
+        <text x="872" y="154" text-anchor="end" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1.4" fill="#857C71">SE SUMAN</text>
+
+        <!-- Capa invariable -->
+        <rect x="0.5" y="208.5" width="899" height="87" fill="#16130F"/>
+        <text x="28" y="244" font-family="Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.7" fill="#857C71">CAPA INVARIABLE</text>
+        <text x="28" y="269" font-family="Newsreader, Georgia, serif" font-size="18" fill="#FAF8F5">Identidad · Principios · Memoria</text>
+        <text x="872" y="258" text-anchor="end" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1.4" fill="#857C71">NO CAMBIA</text>
+
+        <!-- Harness -->
+        <rect x="0.5" y="312.5" width="899" height="87" fill="#FAF8F5" stroke="#E2DCD3"/>
+        <text x="28" y="348" font-family="Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.7" fill="#857C71">HARNESS</text>
+        <text x="28" y="373" font-family="Inter, sans-serif" font-size="15" fill="#16130F">Minimalista — todo lo demás es una extensión</text>
+        <text x="872" y="362" text-anchor="end" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1.4" fill="#857C71">CAMBIA POCO</text>
+
+        <!-- Modelo -->
+        <rect x="0.5" y="416.5" width="899" height="87" fill="#FAF8F5" stroke="#E2DCD3"/>
+        <text x="28" y="452" font-family="Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.7" fill="#857C71">MODELO</text>
+        <text x="28" y="477" font-family="Inter, sans-serif" font-size="15" fill="#16130F">Intercambiable</text>
+        <rect x="176" y="464" width="20" height="20" fill="none" stroke="#857C71"/>
+        <rect x="206" y="464" width="20" height="20" fill="none" stroke="#857C71"/>
+        <rect x="236" y="464" width="20" height="20" fill="none" stroke="#857C71"/>
+        <text x="272" y="479" font-family="Inter, sans-serif" font-size="13" fill="#857C71">el cable</text>
+        <text x="872" y="466" text-anchor="end" font-family="Inter, sans-serif" font-size="10.5" letter-spacing="1.4" fill="#A63D1E">SE REEMPLAZA</text>
+      </svg>
+      <figcaption>Cómo leer el sistema: <strong>abajo</strong> está el modelo, que se reemplaza como un cable. En el <strong>medio</strong>, la capa que no cambia — identidad, principios y memoria. <strong>Arriba</strong>, todo lo que se suma sin tocar lo de abajo: roles con permisos acotados y las superficies donde el sistema se opera. La estabilidad vive en el medio.</figcaption>
+    </figure>
+
+    <h2>El core: el sistema vive en una carpeta</h2>
+
+    <p>La decisión estructural es esta: el sistema no vive en una plataforma. Vive en una carpeta de archivos de texto, versionada en git.</p>
+
+    <p>Ahí adentro está todo, en carpetas con nombre propio: la identidad que no cambia, la memoria sobre la persona con la que trabajo, el flujo de observaciones de cada sesión, los principios, los protocolos operativos, las instrucciones reutilizables, los roles con sus permisos, las extensiones del harness, el material ya destilado, la planta que procesa lo crudo y —también— la infraestructura del servidor como código.</p>
+
+    <p>Y la parte que hace funcionar a todo lo demás: <strong>los roles, las instrucciones y la configuración viven dentro de esa carpeta, y el harness apunta hacia ahí.</strong> Los secretos quedan afuera. Eso significa que cualquier harness capaz de leer archivos puede correr el sistema, y que cambiar de modelo no es migrar: es cambiar un parámetro.</p>
+
+    <p>La estructura en sí es una pieza de diseño de información. Cada dominio tiene su contexto, hay un índice que funciona como mapa, y un frontmatter con convenciones que hacen el grafo legible — para mí y para el sistema. No es una carpeta ordenada por prolijidad: es la interfaz.</p>
+
+    <p><em>El modelo razona; quien opera es el sistema. Cuando el modelo cambia, el sistema no.</em></p>
+
+    <h2>El grafo: la memoria no es un archivo, es un grafo</h2>
+
+    <p>Una carpeta ordenada sigue siendo una carpeta. Lo que hace que este sistema pueda recuperar algo útil no es dónde está guardado, sino cómo está conectado.</p>
+
+    <p>La regla es explícita: <strong>se navega por grafo, no por árbol.</strong> Las carpetas son para las personas; el sistema no busca en un directorio, sigue enlaces. Y para que eso funcione, cada nota declara tres cosas: un único padre jerárquico, un conjunto de relaciones semánticas, y etiquetas que no decoran — declaran peso, estado y función.</p>
+
+    <p>Ese vocabulario es el esquema del grafo. Sin él, la recuperación devuelve ruido: notas que existen pero de las que no se sabe si son punto de entrada, borrador o archivo muerto. Con él, el sistema puede traer solo lo que corresponde según cuánto necesite profundizar.</p>
+
+    <p>Hay además dos niveles de orientación para dos lectores distintos: un índice general que una persona escanea en cinco segundos, y un archivo de contexto por dominio que el sistema lee antes de operar. El mismo mapa, dos velocidades.</p>
+
+    <p>Y el grafo se mantiene solo: la misma planta que procesa el material crudo audita los enlaces rotos, los huérfanos y las etiquetas fuera de convención. La estructura no depende de que alguien se acuerde de cuidarla.</p>
+
+    <h2>El problema</h2>
+
+    <p>Diseñar la interacción con algo que decide.</p>
+
+    <p>La pregunta no era cómo hacer un chatbot — eso ya estaba resuelto y no tiene diseño. La pregunta era otra: cuánta autonomía le doy, dónde entra la persona, qué pasa cuando el modelo se equivoca, y cómo hago para que todo eso siga en pie cuando el modelo cambie. Diseñar un sistema que toma decisiones con consecuencias es un problema de diseño, no de ingeniería.</p>
+
+    <h2>Las decisiones de diseño</h2>
+
+    <h3>Niveles de autonomía</h3>
+    <p>Cada rol tiene un alcance declarado. Hay cosas que el sistema hace sin preguntar —leer, buscar, escribir en su propio espacio— y cosas que no puede hacer solo. La línea no está donde es más cómodo, está donde una equivocación deja de ser reversible.</p>
+
+    <h3>Permisos por herramienta</h3>
+    <p>Cada subagente corre con un conjunto acotado de herramientas y con su propio contexto, aislado. Un rol no puede tocar lo que no le corresponde. El aislamiento no es una restricción técnica: es una decisión de diseño — un sistema con permisos es un sistema donde podés razonar sobre lo que puede salir mal.</p>
+
+    <h3>Dónde entra la revisión humana</h3>
+    <p>El humano en el loop no es un botón de aprobar. Si lo fuera, no sería un diseño, sería una demora. La pregunta útil es dónde ponerlo, y la respuesta es: donde el costo de equivocarse no es recuperable, y donde el criterio todavía no está codificado. Lo demás se automatiza sin preguntar — si el sistema te consulta todo, dejás de leerlo.</p>
+
+    <h3>Qué pasa cuando el modelo falla</h3>
+    <p>Acá está lo que más me cambió la forma de trabajar. Los modos de falla no son los obvios: el problema no es que el modelo se equivoque, es que <strong>el instrumento miente sobre lo que pasó</strong>.</p>
+
+    <p>Tres casos reales, y son el mismo caso tres veces:</p>
+
+    <ul>
+      <li>Un subagente hizo su trabajo y escribió el informe — y el sistema lo marcó como fallado, porque esperaba una edición de código y recibió texto. El estado mentía; el artefacto era correcto.</li>
+      <li>Diagnostiqué con seguridad un error intermitente del sitio como «un despliegue en vuelo», sin medirlo. Cuando por fin lo medí —más de cien pedidos— el cuadro era otro: cada archivo existente fallaba cerca del 30% de las veces, sostenido, en cualquier momento. No era una ventana de despliegue, era el estado normal del sitio.</li>
+      <li>Medí el CSS durante una transición y me devolvió cero en dos elementos: parecía que había roto la cascada. Era el instrumento — bajo tiempo virtual las transiciones no avanzan. Apagué las transiciones y el valor saltó al objetivo: la cascada estaba bien.</li>
+    </ul>
+
+    <p>La conclusión de diseño: <strong>no se verifica contra el reporte, se verifica contra el artefacto.</strong> Un sistema de agentes que confía en su propio autoinforme no tiene control de calidad. Por eso la revisión humana no está para aprobar tareas, sino para ser el control sobre el instrumento — y por eso todo lo que el sistema produce tiene que quedar en un lugar que se pueda inspeccionar después.</p>
+
+    <h2>La memoria: una planta, no un archivo</h2>
+
+    <p>La mayoría de los sistemas de memoria para agentes son un cajón que crece. Este es una planta que procesa.</p>
+
+    <p>El material entra crudo —capturas sueltas, transcripciones de sesión, el registro de lo que se ejecutó— y pasa por dos capas. La primera es <strong>separación mecánica</strong>: duplicados, huérfanos, etiquetas, enlaces rotos, integridad entre el índice y los contextos de cada dominio. Es autónoma, es segura, y no necesita juicio.</p>
+
+    <p>La segunda es la interesante: <strong>loops de pensamiento</strong>. La planta no solo ordena, razona sobre el material. Busca patrones que ninguna sesión sola puede ver — errores que se repiten, correcciones que se agrupan, herramientas que fallan seguido, capturas que conectan con notas viejas.</p>
+
+    <p>Y acá está la disciplina que hace que esto sea diseño y no acumulación de ruido: <strong>los loops producen candidatos, no verdades.</strong> La planta separa y propone; la consolidación y la firma son otro acto. Ningún insight se escribe solo. Cada pasada deja un registro de qué procesó, qué aplicó y qué dejó pendiente de juicio — y ese registro es lo que permite volver sobre el material sin reprocesarlo ni duplicarlo.</p>
+
+    <p>Tres reglas la sostienen:</p>
+
+    <ul>
+      <li><strong>No borra sin preguntar.</strong> Un borrado es un candidato, no una ejecución.</li>
+      <li><strong>No reescribe el piso.</strong> La identidad y la memoria de la persona con la que trabajo quedan fuera de su alcance.</li>
+      <li><strong>No se delega.</strong> La consolidación de la memoria propia no se sube a la nube de nadie. Si la memoria es identidad, delegarla es entregar identidad.</li>
+    </ul>
+
+    <p>Y una consecuencia que vale más de lo que parece: como la memoria es texto plano versionado, <strong>es inspeccionable</strong>. Se puede leer qué cambió, cuándo y por qué. Sin eso, la regla de verificar contra el artefacto y no contra el reporte no se podría cumplir.</p>
+
+    <h2>Cómo se sostiene en el tiempo</h2>
+
+    <p>Tres decisiones hacen que el sistema pueda crecer durante años sin degradarse.</p>
+
+    <h3>Las capacidades se suman, no se refactorizan</h3>
+    <p>Es un sistema de roles, no un programa. Cada capacidad nueva es un rol con su alcance y sus permisos — un editor, un supervisor, un archivista, un consejero. Agregar uno no toca a los otros. El techo del sistema es la cantidad de roles que se te ocurran, no la arquitectura.</p>
+
+    <h3>Y el costo de la estabilidad</h3>
+    <p>Diseñar para cualquier sustrato significa no optimizar para ninguno. Se resigna la integración profunda con un modelo concreto y el pulido que da construir para uno solo. Y cuesta trabajo que no se ve: mantener la capa invariable es esfuerzo que nunca aparece como función nueva. Es el precio de seguir en pie cuando el sustrato cambie — que, con la IA, es cada seis meses.</p>
+
+    <h2>Las superficies</h2>
+
+    <p>Diseñar la operación, no solo la conversación. El sistema se opera desde una consola que se adapta al escritorio y al teléfono, y se alimenta desde superficies de captura — papel electrónico incluido, que entra por un pipeline propio hasta la bandeja de material crudo.</p>
+
+    <figure>
+      <img class="piece__img" src="../assets/img/boty/console.webp" alt="La consola de operación: una sesión con su prompt, su modelo, la lista de agentes disponibles y las operaciones" width="1917" height="1015" loading="lazy">
+      <figcaption>La consola: una sesión, su prompt, su modelo, los agentes disponibles y las operaciones. Diseñar esto fue diseñar la operación, no la conversación.</figcaption>
+    </figure>
+
+    <h2>La infraestructura como decisión de diseño</h2>
+
+    <p>Un sistema que se cae no tiene diseño. Durante meses el servidor se administró a mano, y el resultado era predecible: dos definiciones de servicio peleándose por el mismo puerto, parches que se aplicaban o no según el orden, y un documento que decía una cosa mientras la máquina corría otra.</p>
+
+    <p>El diagnóstico no fue «falta un parche», fue: <strong>no existe una fuente de verdad declarativa</strong>. El estado vivía en comandos sueltos. Reconstruirlo como código — despliegue idempotente, separación entre desplegar y correr, endurecimiento del servicio, y un test de humo como puerta de entrada — convirtió la fiabilidad en algo verificable en vez de algo que se espera.</p>
+
+    <h2>Lo que pasó después</h2>
+
+    <p>Un amigo vio la estructura de archivos del sistema, le gustó, y construyó la suya. Se entusiasmó lo suficiente como para convertirla en el punto de partida de una empresa: <strong>Beeplify</strong>, asistentes de IA para negocios locales de València — un bot que atiende dudas, enseña la carta o los servicios, y toma reservas y pedidos dentro del sitio de cada comercio.</p>
+
+    <p>No la fundé yo. Pero un diseño que hice fue lo bastante legible como para que otra persona pudiera replicarlo y construir una empresa encima — y eso, para mí, es la prueba más dura que puede pasar un diseño de sistema.</p>
+
+    <p>El sitio está en <a href="https://beeplify.es" target="_blank" rel="noopener">beeplify.es</a>.</p>
+
+    <h2>Qué aprendí</h2>
+
+    <p>Todavía estoy en eso. El mundo de la IA no para un segundo, y si lográs mantenerte, ya estás aprendiendo.</p>
+
+    <p>Y algo muy concreto, que es lo que más me sirve hoy: <strong>a veces la IA no hace falta.</strong> Una función en Python lo resuelve y sale mejor. Y a veces la IA es la octava maravilla del mundo. Saber cuál de las dos es la diferencia entre usar una herramienta y tener criterio.</p>
+
+  </article>
+
+  <nav class="wrap case-nav">
+    <a href="kio.html">← Kio</a>
+    <a href="flash-prop.html">Siguiente: Flash Prop →</a>
+  </nav>
+
+</main>
+
+<footer class="wrap site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="label">Contacto</p>
+      <p style="margin-top:.5rem"><a href="mailto:gianfbisio@gmail.com">gianfbisio@gmail.com</a></p>
+    </div>
+    <nav>
+      <a href="https://www.linkedin.com/in/gianfranco-bisio-b39810205/">LinkedIn</a>
+      <a href="../sobre-mi.html">Sobre mí</a>
+      <a href="../cv.html">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
