@@ -396,6 +396,10 @@ figure.resolved img { border: 1px solid var(--rule); }
 figure.figure--phone { max-width: 22rem; margin-inline: auto; }
 figure.figure--phone img { filter: drop-shadow(0 2px 6px rgba(22,19,15,.06)) drop-shadow(0 24px 60px rgba(22,19,15,.09)); }
 
+/* Canvas de Figma (flujos anotados). La fuente mide 905px y la columna de lectura
+   544px, asi que se muestra a ~0.6x: nitido, no pixelado. */
+figure.figure--canvas img { border-radius: 6px; }
+
 /* Captura chica, a tamano natural para que no se pixele */
 figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
 
