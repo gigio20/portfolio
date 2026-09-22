@@ -424,28 +424,42 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
   font-size: .8125rem;
   color: var(--ink);
 }
-.tree dl { margin: 0; }
-.tree__row {
+.tree dl {
+  /* UNA grilla para todo el árbol. Con una grilla por fila, cada fila mide sus
+     columnas por su cuenta y las descripciones quedan escalonadas. */
   display: grid;
-  grid-template-columns: 12rem 1fr;
-  gap: var(--s-4);
-  padding-block: .45rem;
-  border-top: 1px solid var(--rule);
+  grid-template-columns: max-content minmax(0, 1fr);
+  margin: 0;
 }
-.tree__row:first-child { border-top: 0; }
+/* La fila no existe como caja: sus dt/dd entran directo en la grilla del dl, así las
+   columnas se comparten entre todas las filas. La regla de separación va en el dt y el
+   dd (sin gap, para que las dos mitades formen una línea continua). */
+.tree__row { display: contents; }
 .tree__path {
   font-family: var(--mono);
   font-size: .8125rem;
   color: var(--ink);
   white-space: nowrap;
+  border-top: 1px solid var(--rule);
+  padding-block: .45rem;
 }
 /* Las ramas retroceden: los nombres mandan, las líneas acompañan. */
 .tree__br { color: var(--rule); }
-.tree__why { margin: 0; font-size: var(--t-small); color: var(--ink-soft); }
+.tree__why {
+  margin: 0;
+  font-size: var(--t-small);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  padding-block: .45rem;
+  padding-left: var(--s-5);
+}
 .tree__why code { font-family: var(--mono); font-size: .9em; }
+.tree__row:first-child .tree__path,
+.tree__row:first-child .tree__why { border-top: 0; }
 @media (max-width: 40rem) {
-  .tree__row { grid-template-columns: 1fr; gap: .15rem; }
-  .tree__path { white-space: normal; }
+  .tree dl { grid-template-columns: 1fr; }
+  .tree__path { white-space: normal; padding-block: .5rem .15rem; }
+  .tree__why { border-top: 0; padding-block: 0 .55rem; padding-left: 0; }
 }
 /* En pantallas anchas el árbol sale de la columna de lectura: así cada razón entra
    en una línea. Condicionado al ancho para que no genere scroll horizontal. */
@@ -454,7 +468,6 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
     width: var(--wide);
     margin-inline: calc((var(--measure) - var(--wide)) / 2);
   }
-  .tree__row { grid-template-columns: 14rem 1fr; }
 }
 
 /* Navegación entre casos */
