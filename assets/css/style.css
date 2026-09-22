@@ -518,90 +518,79 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* --- CV ---------------------------------------------------- */
+/* --- CV ----------------------------------------------------
+   Dos tipografías y nada más: Newsreader para los títulos (nombre, cabeceras de
+   sección y puestos), Inter para todo lo demás (contacto, fechas, empresas, cuerpo).
+   El contacto vive bajo el nombre, en tinta y al tamaño del cuerpo: es lo primero
+   que alguien necesita, no un pie de página en gris. */
 .cv { padding-block: var(--s-6) var(--s-9); }
 .cv__head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-5) var(--s-7);
-  align-items: flex-end;
-  justify-content: space-between;
   padding-bottom: var(--s-5);
   border-bottom: 2px solid var(--ink);
 }
 .cv__name { font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); letter-spacing: -.025em; }
-.cv__role { margin-top: var(--s-2); font-size: var(--t-body); color: var(--ink-soft); }
-.cv__contact { font-size: var(--t-small); color: var(--muted); text-align: right; line-height: 1.8; }
-@media (max-width: 40rem) { .cv__contact { text-align: left; } }
+.cv__role { margin-top: var(--s-2); font-size: 1.0625rem; color: var(--ink-soft); }
+.cv__contact { margin-top: var(--s-4); font-size: var(--t-body); color: var(--ink-soft); line-height: 1.6; }
 .cv__contact a { text-decoration: none; }
 .cv__contact a:hover { color: var(--accent); }
-.cv__personal { margin-top: var(--s-3); font-size: var(--t-small); color: var(--muted); }
+.cv__personal { margin-top: var(--s-1); font-size: var(--t-small); color: var(--muted); }
 
-.cv__section { margin-top: var(--s-8); }
+.cv__section { margin-top: var(--s-7); }
 .cv__section > h2 {
-  font-family: var(--sans);
-  font-size: var(--t-label);
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding-bottom: var(--s-3);
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: var(--s-5);
+  font-family: var(--serif);
+  font-size: 1.3125rem;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: var(--s-4);
 }
-.cv__entry { padding-block: var(--s-5); border-bottom: 1px solid var(--rule); }
-.cv__entry:last-child { border-bottom: 0; }
+.cv__entry { margin-top: var(--s-5); }
 .cv__entry-head {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-2) var(--s-4);
+  gap: var(--s-1) var(--s-4);
   align-items: baseline;
   justify-content: space-between;
 }
-.cv__title { font-family: var(--serif); font-size: 1.3125rem; letter-spacing: -.01em; }
+.cv__title { font-family: var(--serif); font-size: 1.125rem; letter-spacing: -.01em; }
 .cv__title span { font-family: var(--sans); font-size: var(--t-body); color: var(--ink-soft); }
 .cv__when { font-size: var(--t-small); color: var(--muted); font-feature-settings: "tnum" 1; white-space: nowrap; }
-.cv__where { margin-top: var(--s-1); font-size: var(--t-small); color: var(--muted); }
+.cv__where { margin-top: var(--s-1); font-size: var(--t-small); color: var(--ink-soft); }
+/* Qué es y cuál fue el rol, en dos líneas. Sin bullets: el párrafo ya es la unidad. */
+.cv__desc { margin-top: var(--s-2); font-size: var(--t-body); color: var(--ink-soft); }
 .cv__entry ul { margin-top: var(--s-3); padding-left: 1.1em; }
 .cv__entry li { font-size: var(--t-body); color: var(--ink-soft); }
 .cv__entry li + li { margin-top: var(--s-2); }
-.cv__skills { display: flex; flex-wrap: wrap; gap: var(--s-2); }
-.cv__skills span {
-  font-size: var(--t-small);
-  border: 1px solid var(--rule);
-  padding: .3rem .7rem;
-  color: var(--ink-soft);
-}
-/* Entradas de una línea: roles comerciales y formación, sin descripción. */
-.cv__entry--slim { padding-block: .4rem; }
-.cv__slim { font-size: var(--t-body); color: var(--ink-soft); }
-.cv__slim strong { color: var(--ink); font-weight: 600; }
-.cv__slim .cv__when { float: right; }
+/* Entradas de una línea: roles comerciales. Misma estructura que las demás, sin cuerpo. */
+.cv__entry--slim { margin-top: var(--s-3); }
+.cv__entry--slim .cv__title { font-size: 1.0625rem; }
 
 /* --- Impresión: el CV se imprime a PDF limpio -------------- */
 @media print {
   /* A4 explicito: sin esto Chrome imprime en Letter (216x279mm), que no es el papel de Espana. */
-  @page { size: A4; margin: 10mm 12mm; }
-  :root { --paper: #fff; --paper-2: #fff; --ink: #000; --ink-soft: #222; --muted: #555; --rule: #bbb; }
+  @page { size: A4; margin: 14mm 16mm; }
+  :root { --paper: #fff; --paper-2: #fff; --ink: #000; --ink-soft: #2a2a2a; --muted: #5c5c5c; --rule: #c9c9c9; }
   .site-header, .site-footer, .no-print { display: none !important; }
-  /* 8.9pt para que el CV entero entre en UNA hoja A4. */
-  body { font-size: 8.4pt; line-height: 1.3; }
+  body { font-size: 10pt; line-height: 1.45; }
   .cv { padding: 0; max-width: none; }
-  .cv__head { padding-bottom: .4rem; }
-  .cv__name { font-size: 18pt; }
-  .cv__role { font-size: 9.5pt; }
-  .cv__contact { line-height: 1.5; }
-  .cv__personal { margin-top: .3rem; }
-  .cv__section { margin-top: .42rem; }
-  .cv__section > h2 { padding-bottom: .18rem; margin-bottom: .3rem; }
-  .cv__entry { break-inside: avoid; padding-block: .3rem; }
-  .cv__entry--slim { padding-block: .22rem; }
-  .cv__slim { font-size: 8.4pt; }
-  .cv__entry ul { margin-top: .15rem; }
-  .cv__entry li + li { margin-top: .1rem; }
-  .cv__title { font-size: 10pt; }
-  .cv__title span { font-size: 8.6pt; }
-  .cv__skills span { border-color: #999; padding: .1rem .45rem; }
+  .cv__head { padding-bottom: 3mm; }
+  .cv__name { font-size: 23pt; }
+  .cv__role { font-size: 11pt; margin-top: 1mm; }
+  .cv__contact { font-size: 9.6pt; line-height: 1.5; margin-top: 3mm; }
+  .cv__personal { font-size: 9.2pt; margin-top: .4mm; }
+  .cv__section { margin-top: 6.5mm; }
+  .cv__section > h2 { font-size: 12.5pt; margin-bottom: 2.2mm; }
+  .cv__entry { margin-top: 3.4mm; }
+  .cv__entry--slim { margin-top: 2mm; }
+  .cv__title { font-size: 10.8pt; }
+  .cv__entry--slim .cv__title { font-size: 10pt; }
+  .cv__title span { font-size: 9.8pt; }
+  .cv__when { font-size: 9.4pt; }
+  .cv__where { font-size: 9.4pt; margin-top: .3mm; }
+  .cv__desc { font-size: 9.8pt; line-height: 1.42; margin-top: 1.1mm; }
+  .cv__entry ul { margin-top: 1.2mm; }
+  .cv__entry li { font-size: 9.6pt; line-height: 1.42; }
+  .cv__entry li + li { margin-top: .9mm; }
   a { color: inherit; text-decoration: none; }
 }
 
