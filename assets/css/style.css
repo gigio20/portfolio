@@ -339,10 +339,13 @@ figcaption {
   gap: var(--s-6) var(--s-5);
   margin-block: var(--s-8);
 }
-/* Capturas de Figma: PNG con transparencia y esquinas redondeadas.
+/* Capturas de Figma: WebP con alfa y esquinas redondeadas.
    Sin borde ni fondo —el rectángulo recto choca con la esquina redondeada
-y   el fondo se ve a través del alpha— y con drop-shadow, que sigue la forma
-   real del píxel en vez de dibujar un rectángulo detrás. */
+   el fondo se ve a través del alfa— y con drop-shadow, que sigue la forma
+   real del píxel en vez de dibujar un rectángulo detrás.
+   OJO con el alfa: Figma exporta estas capturas con el fondo oscuro ya aplanado dentro
+   del archivo, así que si se reconvierten a RGB las esquinas vuelven a verse como un
+   rectángulo oscuro. El script que reconstruye el alfa es `_fuentes/arreglar-alfa.py`. */
 .piece__img {
   width: 100%;
   filter:
