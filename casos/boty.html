@@ -130,59 +130,82 @@
     <p>La decisión estructural es esta: el sistema no vive en una plataforma. Vive en una carpeta de archivos de texto, versionada en git.</p>
 
     <div class="tree">
-      <p class="label">Una carpeta, versionada en git</p>
+      <div class="tree__head">
+        <span class="tree__root">metabot/</span>
+        <span class="label">versionado en git</span>
+      </div>
       <dl>
         <div class="tree__row">
-          <dt class="tree__path">boty-base.md</dt>
-          <dd class="tree__why">La identidad. Lo único que no cambia cuando cambia el modelo.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>boty-base.md</dt>
+          <dd class="tree__why">La constitución: cómo piensa y cómo decide</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">MEMORY.md</dt>
-          <dd class="tree__why">Lo que sé de la persona con la que trabajo.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>MEMORY.md</dt>
+          <dd class="tree__why">La memoria: lo que el modelo, por sí solo, no retiene</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">ai-notes.md</dt>
-          <dd class="tree__why">El flujo de observaciones de cada sesión. Mi cuaderno.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>ai-notes.md</dt>
+          <dd class="tree__why">El flujo de observaciones de cada sesión</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">Principios.md</dt>
-          <dd class="tree__why">Los principios que ordenan las decisiones.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>Principios.md</dt>
+          <dd class="tree__why">Los principios que ordenan las decisiones</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">comandos/</dt>
-          <dd class="tree__why">Protocolos: arranque, cierre, y el kernel de cada dominio.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>comandos/</dt>
+          <dd class="tree__why">Protocolos: arranque, cierre y kernel de dominio</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">skills/</dt>
-          <dd class="tree__why">Instrucciones reutilizables por tarea. Se suman, no se refactorizan.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>skills/</dt>
+          <dd class="tree__why">Ocho instrucciones reutilizables por tarea</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">agents/</dt>
-          <dd class="tree__why">Roles con permisos acotados y contexto aislado.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>agents/</dt>
+          <dd class="tree__why">Roles con permisos acotados y contexto aislado</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">extensions/</dt>
-          <dd class="tree__why">Código que le agrega capacidades al harness.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">│   ├── </span>boty-consejero/</dt>
+          <dd class="tree__why">Segunda opinión, con contexto limpio</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">insights/</dt>
-          <dd class="tree__why">Lo destilado, de mi autoría. Él lee; no escribe acá.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">│   ├── </span>boty-reciclador/</dt>
+          <dd class="tree__why">Destila el material crudo en ideas</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">planta/</dt>
-          <dd class="tree__why">Procesa el material crudo. <code>deposito/</code> guarda cada corrida.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">│   ├── </span>boty-editor.md</dt>
+          <dd class="tree__why">Mira cada foto del pipeline y diagnostica</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">ia-os/</dt>
-          <dd class="tree__why">La documentación del sistema sobre sí mismo.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">│   └── </span>hats/</dt>
+          <dd class="tree__why">Los modos de un solo dominio</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">vps/</dt>
-          <dd class="tree__why">La infraestructura del servidor como código.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>extensions/</dt>
+          <dd class="tree__why">Código que le agrega capacidades al harness</dd>
         </div>
         <div class="tree__row">
-          <dt class="tree__path">tasks/</dt>
-          <dd class="tree__why">El backlog.</dd>
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>insights/</dt>
+          <dd class="tree__why">Lo destilado, de mi autoría</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>planta/</dt>
+          <dd class="tree__why">Procesa el material crudo</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">│   └── </span>deposito/</dt>
+          <dd class="tree__why">El ticket de cada corrida</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>ia-os/</dt>
+          <dd class="tree__why">La documentación del sistema sobre sí mismo</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">├── </span>vps/</dt>
+          <dd class="tree__why">La infraestructura del servidor como código</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path"><span class="tree__br" aria-hidden="true">└── </span>tasks/</dt>
+          <dd class="tree__why">El backlog</dd>
         </div>
       </dl>
     </div>

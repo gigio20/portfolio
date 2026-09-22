@@ -25,6 +25,7 @@ a { color: inherit; }
   --ink-soft: #4A443D;
   --muted:    #726B61;
   --rule:     #E2DCD3;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
   --accent:   #A63D1E;
 
   /* Tipografía */
@@ -403,7 +404,7 @@ figure.figure--canvas img { border-radius: 6px; }
 /* Captura chica, a tamano natural para que no se pixele */
 figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
 
-/* Árbol de carpetas del sistema. Cada fila es un path y por qué existe.
+/* Árbol de carpetas del sistema: el dibujo ramificado, con el porqué de cada rama.
    El marco punteado no es decoración: dice que todo esto es un repositorio. */
 .tree {
   border: 1px dashed var(--rule);
@@ -411,29 +412,49 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
   padding: var(--s-5) var(--s-5) var(--s-3);
   margin-block: var(--s-8);
 }
-.tree > .label { margin-bottom: var(--s-4); }
+.tree__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+.tree__root {
+  font-family: var(--mono);
+  font-size: .8125rem;
+  color: var(--ink);
+}
 .tree dl { margin: 0; }
 .tree__row {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
+  grid-template-columns: 12rem 1fr;
   gap: var(--s-4);
-  padding-block: .55rem;
+  padding-block: .45rem;
   border-top: 1px solid var(--rule);
 }
 .tree__row:first-child { border-top: 0; }
 .tree__path {
-  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-family: var(--mono);
   font-size: .8125rem;
   color: var(--ink);
   white-space: nowrap;
 }
+/* Las ramas retroceden: los nombres mandan, las líneas acompañan. */
+.tree__br { color: var(--rule); }
 .tree__why { margin: 0; font-size: var(--t-small); color: var(--ink-soft); }
-.tree__why code {
-  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
-  font-size: .9em;
-}
+.tree__why code { font-family: var(--mono); font-size: .9em; }
 @media (max-width: 40rem) {
   .tree__row { grid-template-columns: 1fr; gap: .15rem; }
+  .tree__path { white-space: normal; }
+}
+/* En pantallas anchas el árbol sale de la columna de lectura: así cada razón entra
+   en una línea. Condicionado al ancho para que no genere scroll horizontal. */
+@media (min-width: 75rem) {
+  .tree {
+    width: var(--wide);
+    margin-inline: calc((var(--measure) - var(--wide)) / 2);
+  }
+  .tree__row { grid-template-columns: 14rem 1fr; }
 }
 
 /* Navegación entre casos */
