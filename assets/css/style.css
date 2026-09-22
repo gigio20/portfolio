@@ -23,7 +23,7 @@ a { color: inherit; }
   --paper-2:  #F2EEE8;
   --ink:      #16130F;
   --ink-soft: #4A443D;
-  --muted:    #857C71;
+  --muted:    #726B61;
   --rule:     #E2DCD3;
   --accent:   #A63D1E;
 
@@ -515,7 +515,10 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
 /* --- Móvil ------------------------------------------------- */
 @media (max-width: 40rem) {
   .site-header { flex-direction: column; align-items: flex-start; gap: var(--s-4); }
-  .site-nav { gap: var(--s-4); }
+  .site-nav { gap: var(--s-4); flex-wrap: wrap; }
+  /* En táctil los links son el único objetivo: 17px de alto es muy fino para el pulgar. */
+  .site-nav a { padding-block: .4rem; padding-inline: .35rem; }
+  .site-footer a { padding-block: .35rem; }
   .case-item__link { grid-template-columns: 1fr; gap: var(--s-3); }
   .case-item__num { padding-top: 0; }
   .case-item__meta span:not(:last-child)::after { display: none; }
