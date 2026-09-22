@@ -535,6 +535,7 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
 @media (max-width: 40rem) { .cv__contact { text-align: left; } }
 .cv__contact a { text-decoration: none; }
 .cv__contact a:hover { color: var(--accent); }
+.cv__personal { margin-top: var(--s-3); font-size: var(--t-small); color: var(--muted); }
 
 .cv__section { margin-top: var(--s-8); }
 .cv__section > h2 {
@@ -571,19 +572,37 @@ figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
   padding: .3rem .7rem;
   color: var(--ink-soft);
 }
+/* Entradas de una línea: roles comerciales y formación, sin descripción. */
+.cv__entry--slim { padding-block: .4rem; }
+.cv__slim { font-size: var(--t-body); color: var(--ink-soft); }
+.cv__slim strong { color: var(--ink); font-weight: 600; }
+.cv__slim .cv__when { float: right; }
 
 /* --- Impresión: el CV se imprime a PDF limpio -------------- */
 @media print {
+  /* A4 explicito: sin esto Chrome imprime en Letter (216x279mm), que no es el papel de Espana. */
+  @page { size: A4; margin: 10mm 12mm; }
   :root { --paper: #fff; --paper-2: #fff; --ink: #000; --ink-soft: #222; --muted: #555; --rule: #bbb; }
   .site-header, .site-footer, .no-print { display: none !important; }
-  body { font-size: 10.5pt; line-height: 1.42; }
+  /* 8.9pt para que el CV entero entre en UNA hoja A4. */
+  body { font-size: 8.4pt; line-height: 1.3; }
   .cv { padding: 0; max-width: none; }
-  .cv__section { margin-top: 1.1rem; }
-  .cv__entry { break-inside: avoid; padding-block: .55rem; }
-  .cv__entry ul { margin-top: .3rem; }
-  .cv__skills span { border-color: #999; }
+  .cv__head { padding-bottom: .4rem; }
+  .cv__name { font-size: 18pt; }
+  .cv__role { font-size: 9.5pt; }
+  .cv__contact { line-height: 1.5; }
+  .cv__personal { margin-top: .3rem; }
+  .cv__section { margin-top: .42rem; }
+  .cv__section > h2 { padding-bottom: .18rem; margin-bottom: .3rem; }
+  .cv__entry { break-inside: avoid; padding-block: .3rem; }
+  .cv__entry--slim { padding-block: .22rem; }
+  .cv__slim { font-size: 8.4pt; }
+  .cv__entry ul { margin-top: .15rem; }
+  .cv__entry li + li { margin-top: .1rem; }
+  .cv__title { font-size: 10pt; }
+  .cv__title span { font-size: 8.6pt; }
+  .cv__skills span { border-color: #999; padding: .1rem .45rem; }
   a { color: inherit; text-decoration: none; }
-  @page { margin: 15mm 14mm; }
 }
 
 /* --- Móvil ------------------------------------------------- */
