@@ -403,6 +403,39 @@ figure.figure--canvas img { border-radius: 6px; }
 /* Captura chica, a tamano natural para que no se pixele */
 figure.figure--narrow { max-width: 17rem; margin-inline: auto; }
 
+/* Árbol de carpetas del sistema. Cada fila es un path y por qué existe.
+   El marco punteado no es decoración: dice que todo esto es un repositorio. */
+.tree {
+  border: 1px dashed var(--rule);
+  border-radius: 8px;
+  padding: var(--s-5) var(--s-5) var(--s-3);
+  margin-block: var(--s-8);
+}
+.tree > .label { margin-bottom: var(--s-4); }
+.tree dl { margin: 0; }
+.tree__row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: var(--s-4);
+  padding-block: .55rem;
+  border-top: 1px solid var(--rule);
+}
+.tree__row:first-child { border-top: 0; }
+.tree__path {
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: .8125rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.tree__why { margin: 0; font-size: var(--t-small); color: var(--ink-soft); }
+.tree__why code {
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: .9em;
+}
+@media (max-width: 40rem) {
+  .tree__row { grid-template-columns: 1fr; gap: .15rem; }
+}
+
 /* Navegación entre casos */
 .case-nav {
   display: flex;

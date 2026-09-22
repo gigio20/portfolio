@@ -129,7 +129,65 @@
 
     <p>La decisión estructural es esta: el sistema no vive en una plataforma. Vive en una carpeta de archivos de texto, versionada en git.</p>
 
-    <p>Ahí adentro está todo, en carpetas con nombre propio: la identidad que no cambia, la memoria sobre la persona con la que trabajo, el flujo de observaciones de cada sesión, los principios, los protocolos operativos, las instrucciones reutilizables, los roles con sus permisos, las extensiones del harness, el material ya destilado, la planta que procesa lo crudo y —también— la infraestructura del servidor como código.</p>
+    <div class="tree">
+      <p class="label">Una carpeta, versionada en git</p>
+      <dl>
+        <div class="tree__row">
+          <dt class="tree__path">boty-base.md</dt>
+          <dd class="tree__why">La identidad. Lo único que no cambia cuando cambia el modelo.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">MEMORY.md</dt>
+          <dd class="tree__why">Lo que sé de la persona con la que trabajo.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">ai-notes.md</dt>
+          <dd class="tree__why">El flujo de observaciones de cada sesión. Mi cuaderno.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">Principios.md</dt>
+          <dd class="tree__why">Los principios que ordenan las decisiones.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">comandos/</dt>
+          <dd class="tree__why">Protocolos: arranque, cierre, y el kernel de cada dominio.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">skills/</dt>
+          <dd class="tree__why">Instrucciones reutilizables por tarea. Se suman, no se refactorizan.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">agents/</dt>
+          <dd class="tree__why">Roles con permisos acotados y contexto aislado.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">extensions/</dt>
+          <dd class="tree__why">Código que le agrega capacidades al harness.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">insights/</dt>
+          <dd class="tree__why">Lo destilado, de mi autoría. Él lee; no escribe acá.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">planta/</dt>
+          <dd class="tree__why">Procesa el material crudo. <code>deposito/</code> guarda cada corrida.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">ia-os/</dt>
+          <dd class="tree__why">La documentación del sistema sobre sí mismo.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">vps/</dt>
+          <dd class="tree__why">La infraestructura del servidor como código.</dd>
+        </div>
+        <div class="tree__row">
+          <dt class="tree__path">tasks/</dt>
+          <dd class="tree__why">El backlog.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <p>Versionarlo en git no es respaldo, es el mecanismo: <strong>el servidor no se actualiza a mano, recibe el mismo repositorio.</strong> Por eso el sistema es idéntico en mi máquina y en el servidor, cada decisión queda con su historia y se puede volver atrás, y cualquier máquina capaz de leer esa carpeta puede operar el sistema.</p>
 
     <p>Y la parte que hace funcionar a todo lo demás: <strong>los roles, las instrucciones y la configuración viven dentro de esa carpeta, y el harness apunta hacia ahí.</strong> Los secretos quedan afuera. Eso significa que cualquier harness capaz de leer archivos puede correr el sistema, y que cambiar de modelo no es migrar: es cambiar un parámetro.</p>
 
@@ -226,9 +284,9 @@
 
     <h2>Lo que pasó después</h2>
 
-    <p>Un amigo vio la estructura de archivos del sistema, le gustó, y construyó la suya. Se entusiasmó lo suficiente como para convertirla en el punto de partida de una empresa: <strong>Beeplify</strong>, asistentes de IA para negocios locales de València — un bot que atiende dudas, enseña la carta o los servicios, y toma reservas y pedidos dentro del sitio de cada comercio.</p>
+    <p>Le compartí la arquitectura del agente a un amigo, y construyó una empresa encima: <strong>Beeplify</strong>, asistentes de IA para negocios locales de València — un bot que atiende dudas, enseña la carta o los servicios, y toma reservas y pedidos dentro del sitio de cada comercio.</p>
 
-    <p>No la fundé yo. Pero un diseño que hice fue lo bastante legible como para que otra persona pudiera replicarlo y construir una empresa encima — y eso, para mí, es la prueba más dura que puede pasar un diseño de sistema.</p>
+    <p>No la fundé yo: la arquitectura fue el punto de partida, la empresa es de él. Pero que un diseño mío fuera lo bastante legible como para que otra persona lo replicara y levantara un negocio con eso es, para mí, la prueba más dura que puede pasar un diseño de sistema.</p>
 
     <p>El sitio está en <a href="https://beeplify.es" target="_blank" rel="noopener">beeplify.es</a>.</p>
 
